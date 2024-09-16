@@ -1,4 +1,93 @@
-/* Base styles */
+/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+   html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+  }
+  
+  /*
+   * Remove text-shadow in selection highlight:
+   * https://twitter.com/miketaylr/status/12228805301
+   *
+   * Vendor-prefixed and regular ::selection selectors cannot be combined:
+   * https://stackoverflow.com/a/16982510/7133471
+   *
+   * Customize the background color to match your design.
+   */
+  
+  ::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+  }
+  
+  ::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+  }
+  
+  /*
+   * A better looking default horizontal rule
+   */
+  
+  hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+  }
+  
+  /*
+   * Remove the gap between audio, canvas, iframes,
+   * images, videos and the bottom of their containers:
+   * https://github.com/h5bp/html5-boilerplate/issues/440
+   */
+  
+  audio,
+  canvas,
+  iframe,
+  img,
+  svg,
+  video {
+    vertical-align: middle;
+  }
+  
+  /*
+   * Remove default fieldset styles.
+   */
+  
+  fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /*
+   * Allow only vertical resizing of textareas.
+   */
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  /* ==========================================================================
+     Author's custom styles=========================*/
+
+
+/* General styles */
 body {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
@@ -21,9 +110,12 @@ a:hover {
   color: #007bff;  /* Darker blue */
 }
 
+
+/*==============Mobile Styles==========*/
+
 /* Header styles */
 header {
-  background-color: ;  /* Lighter blue */
+  background-color: lightblue;  /* Lighter blue */
   padding: 1rem;
 }
 
@@ -212,10 +304,77 @@ footer {
   color: #666;
 }
 
-/* Additional styles for responsiveness can be added here */
-@media (max-width: 768px) {
-  /* Adjust styles for smaller screens */
+/* Additional styles for responsiveness here */
+/* General styles */
+body {
+  font-family: 'Open Sans', sans-serif; 
+  margin: 0;
+  padding: 0;
+  background-color: #f5f9ff;  /* Light blue */
+}
+
+h1, h2, h3 {
+  font-family: 'Roboto Serif', serif;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: #3399ff;  /* Light blue */
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+  color: #007bff;  /* Darker blue */
+}
+
+
+/* Media Queries */
+
+/* For screens wider than 768px */
+@media only screen and (min-width: 768px) {
+
+  /* Header styles */
+  header {
+    padding: 2rem;  /* Increase padding on larger screens  */
+  }
+
+  /* Main styles */
+  main {
+    padding: 4rem;  /* Increase padding on larger screens  */
+  }
+
+  /* Projects */
   .projects-items article {
-    width: 48%;
+    width: calc(25% - 1rem);  /* Adjust project width for wider layout */
+  }
+
+  /* Skills */
+  #skills ul {
+    padding: 30px;  /* Increase padding for better spacing */
+  }
+
+  #skills li {
+    font-size: 1.2em;  /* Increase font size for better readability */
+  }
+}
+
+/* For screens wider than 1200px */
+@media only screen and (min-width: 1200px) {
+
+  /* Main styles */
+  main {
+    max-width: 1000px;  /* Set a maximum width for the main content area */
+    margin: 0 auto;  /* Center the content horizontally */
+  }
+
+  /* Projects */
+  .projects-items article {
+    width: calc(33% - 1.5rem);  /* Adjust project width for even wider layout */
+  }
+
+  /* Skills */
+  #skills li {
+    font-size: 1.4em;  /* Increase font size further for larger screens */
   }
 }
